@@ -1,8 +1,21 @@
 Move `dapp kube deploy` functions into `helm`.
 
+# Helm install/upgrade logging
+
+There is a need to see what is going on during deploy.
+
+Issues related to helm logging:
+
+* https://github.com/kubernetes/helm/issues/2298
+* https://github.com/kubernetes/helm/issues/1810
+
+## Experiments with log streaming during install/upgrade helm operation
+
+https://github.com/kubernetes/helm/pull/3479
+
 # Helm rollback experiment
 
-* `helm instal`l => success
+* `helm install` => success
     * Release created
     * `helm list`
         * DEPLOYED state
